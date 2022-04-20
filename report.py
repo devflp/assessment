@@ -4,9 +4,9 @@ import pandas as pd
 def print_summary():
     path = "./data/Restaurant_Scores_-_LIVES_Standard.csv"
     dataframe = pd.read_csv(path)
-    inspection = dataframe['inspection_score']  # gets the inspection_score column
+    inspection = dataframe['inspection_score']
     print("**---    Summary Statistics for Inspection Scores    ---**")
-    # The >8 string format specification aligns the field ({}) to the right with a width of 8
+    # The >8 string format specification aligns the field to the right with a width value of 8
     print(f"Minimum: {int(inspection.min()): >8}")
     print(f"Maximum: {int(inspection.max()): >8}")
     print(f"Mean:    {round(inspection.mean(), 4): >8}")  # Rounded to 4 decimal places for readability
